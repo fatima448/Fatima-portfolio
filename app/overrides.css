@@ -1,1 +1,7 @@
-.guide{display:none!important}.app{width:min(1040px,100%);height:min(650px,calc(100svh - 40px))}
+.guide {
+  display: none !important;
+}
+.app {
+  width: min(1040px, 100%);
+  height: min(650px, calc(100svh - 40px));
+}
