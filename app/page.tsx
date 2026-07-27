@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 import { projects } from "./data/projects";
 const sections = [
   "Home",
@@ -33,6 +34,7 @@ export default function Home() {
                 {s}
               </button>
             ))}
+            <Link className="version-link" href="/scrollable">Scroll version</Link>
           </nav>
         </header>
         <section className="viewport">
@@ -128,7 +130,7 @@ function Projects({ filter, setFilter, list }: Readonly<{
             <small>{p.tech.join(" · ")}</small>
             <footer>
               {p.features}
-              <b>GitHub ↗</b>
+              <a href={p.url} target="_blank" rel="noreferrer">GitHub ↗</a>
             </footer>
           </article>
         ))}
