@@ -1183,3 +1183,6 @@ html body main.terminal-portfolio:not(.light-mode) .social-links a:hover {
   html body main.canvas .tabbar { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 5px !important; }
   html body main.canvas .tabbar button { padding: 9px 2px !important; font-size: 11px !important; }
 }
+
+/* Softer colored copy for the About paragraph in dark mode. */
+.dark-mode .about-statement span { color: #b9c9f2 !important; }
