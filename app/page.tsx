@@ -1,5 +1,5 @@
-import Portfolio from "./components/Portfolio";
+import AIDesignPage from "./ai-design/page";
 
 export default function Home() {
-  return <Portfolio />;
+  return <AIDesignPage />;
 }
