@@ -1,4 +1,5 @@
 import { ArrowUpRight, GitFork, Mail, Network } from "lucide-react";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import {
   SiFigma,
