@@ -1,28 +1,17 @@
 import type { NextConfig } from "next";
 
+const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
+const repoName = "Fatima-portfolio";
+
 const nextConfig: NextConfig = {
   output: "export",
-
-  basePath: "/Fatima-portfolio",
-  assetPrefix: "/Fatima-portfolio/",
-
   images: {
     unoptimized: true,
   },
-};
-
-export default nextConfig;import type { NextConfig } from "next";
-
-const isGitHubPages = process.env.NODE_ENV === "production";
-
-const nextConfig: NextConfig = {
-  output: "export",
-
-  basePath: isGitHubPages ? "/Fatima-portfolio" : "",
-  assetPrefix: isGitHubPages ? "/Fatima-portfolio/" : "",
-
-  images: {
-    unoptimized: true,
+  basePath: isGitHubPages ? `/${repoName}` : "",
+  assetPrefix: isGitHubPages ? `/${repoName}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGitHubPages ? `/${repoName}` : "",
   },
 };
 
