@@ -13,6 +13,7 @@ import {
 import { projects } from "../data/projects";
 import "./ai-design.css";
 import "./adjustments.css";
+const BASE_PATH = "/Fatima-portfolio";
 const skills = [
   "React",
   "Next.js",
@@ -127,7 +128,7 @@ export default function AIDesignPage() {
               rel="noreferrer"
             >
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}`}
+                src={`${BASE_PATH}${project.image}`}
                 alt={`${project.name} preview`}
               />
               <div>
